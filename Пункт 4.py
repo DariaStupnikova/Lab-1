@@ -1,16 +1,16 @@
 import csv
 import random
 
-rand = []
-cnt = 0
-for i in range(20):
+rand = [] #Массив, куда я буду сохранять произольные значения 
+cnt = 0 #Счетчик для нумерации в файле
+for i in range(20): #Выбор произвольных 20 чисел
     num = random.randint(1, 9410)
     rand.append(num)
 rand.sort()
 with open("books.csv", encoding='cp1251') as r_file:
-    f = open('bibly.txt', 'w')
+    f = open('bibly.txt', 'w') #Создаем текстовый файл для записи
     file_reader = csv.DictReader(r_file, delimiter=";")
-    count = 1
+    count = 1 #Счетчик для обращения к файлу
     for lst in file_reader:
         count += 1
         if count in rand:
