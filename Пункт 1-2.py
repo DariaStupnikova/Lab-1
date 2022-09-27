@@ -14,4 +14,4 @@ with open("books.csv", encoding='cp1251') as r_file:
             cnt += 1
     
     print(f'Всего в файле {count} строк.')
-    print(f'Имеющих длинное назвоне {cnt} строк.')
+    print(f'Имеющих длинное название {cnt} строк.')
